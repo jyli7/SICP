@@ -1,0 +1,1 @@
+Working through select exercises in SICP: http://mitpress.mit.edu/sicp/. 

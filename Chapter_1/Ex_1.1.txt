@@ -1,0 +1,28 @@
+10
+12
+8
+3
+6
+define a 3
+define b 4
+19 
+false 
+4
+16
+9 #WRONG 6!
+16
+
+---
+(/ (TOP)
+   (BOTTOM)
+)
+
+---
+( define square (x) 
+	(* x x)
+)
+
+( define (name (a, b, c) )
+	(cond (and (a<b) (a<c)) (+ (* b b) (* c c) )
+	(cond (and (b<a) (b<c)) b**2 + c**2 )
+	(cond (else b + c ))
