@@ -41,3 +41,4 @@
  
  (search-for-primes 1000 1037)
  (search-for-primes 1000000 1000037)
+ (search-for-primes 10000000 10000043)

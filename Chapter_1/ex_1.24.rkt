@@ -20,7 +20,7 @@
    (start-prime-test n (runtime))) 
  
  (define (start-prime-test n start-time) 
-   (if (fast-prime? n 10) 
+   (if (fast-prime? n 5) 
        (report-prime n (- (runtime) start-time)))) 
  
  (define (fermat-test n)
@@ -38,9 +38,9 @@ m))
 m))))
  
  (define (fast-prime? n times)
-(cond ((= times 0) true)
-((fermat-test n) (fast-prime? n (- times 1)))
-(else false)))
+   (cond ((= times 0) true)
+         ((fermat-test n) (fast-prime? n (- times 1)))
+         (else false)))
  
   
  (define (report-prime n elapsed-time) 
@@ -58,4 +58,5 @@ m))))
                 (if (even? last) (- last 1) last)))
  
  (search-for-primes 1000 1019)       ; 1e3 
- (search-for-primes 1000000 1000037)     ; 1e4 
+ (search-for-primes 1000000 1000037)     ; 1e4
+ (search-for-primes 1000000000 1000000037)     ; 1e4
