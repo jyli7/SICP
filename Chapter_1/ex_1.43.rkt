@@ -7,9 +7,10 @@
   (* x x))
 
 (define (repeated f times)
-  (lambda (x)
-    (if (= times 1)
-        (f x)
-        ((compose f (repeated f (- times 1))) x))))
+  (define (repeat-iter next result times)
+    (if (<= times 1)
+        result
+        (repeat-iter next (compose f next) (- times 1))))
+  (repeat-iter f f times))
 
 ((repeated square 2) 5)
