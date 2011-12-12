@@ -39,7 +39,7 @@
 
 (interval-width (make-interval 4 8))
 
-;width of the sum of two intervals is entirely a function fo the width of each interval
+;width of the sum of two intervals is entirely a function of the width of each interval
 
 ;width of interval 1 is 1, interval 2 is 4. Width of added interval is 5. 
 (interval-width (add-interval (make-interval 3 5) (make-interval 2 10)))

@@ -1,5 +1,7 @@
 #lang planet neil/sicp
 
+(display (list 1 2 3 4))
+
 (define (make-segment start-point end-point)
   (cons start-point end-point))
 
