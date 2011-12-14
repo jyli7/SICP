@@ -2,7 +2,7 @@
 
 (define (reverse l)
   (if (null? (cdr l))
-      (car l)
-      (cons (reverse (cdr l)) (car l))))
+      (list (car l))
+      (append (reverse (cdr l)) (list (car l)))))
 
-(display (reverse (list 1 4 9 16 25)))
+(display (reverse (list 1 4 (list 8 9) 16 25)))

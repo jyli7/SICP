@@ -1,1 +1,1 @@
-Working through select exercises in SICP: http://mitpress.mit.edu/sicp/. 
+Working through most of the exercises in SICP: http://mitpress.mit.edu/sicp/. 

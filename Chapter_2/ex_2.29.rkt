@@ -6,6 +6,13 @@
 (define (make-branch length structure)
   (list length structure))
 
+(define (make-mobile left right)
+  (cons left right))
+
+(define (make-branch length structure)
+  (cons length structure))
+
+
 ;a. Write selectors
 
 (define (left-branch mobile)
@@ -47,3 +54,16 @@
         (else #t)))
 
 (balanced? (make-mobile (list 2 (make-mobile (list 2 4) (list 3 4))) (list 4 4)))
+
+;d. If we change mobile definition, you only need to change the (right-branch) and (branch-structure) definitions. Namely, no need for car. 
+
+(define (make-mobile-mod left right)
+  (cons left right))
+(define (make-branch-mod length structure)
+  (cons length structure))
+
+(define (right-branch-mod mobile)
+  (cdr mobile))
+
+(define (branch-structure-mod branch)
+  (cdr branch))

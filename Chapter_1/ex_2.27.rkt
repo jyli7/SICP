@@ -1,15 +1,8 @@
 #lang planet neil/sicp
 
-;original definition of reverse (from 2.18) --> not quite correct
-(define (reverse-orig l)
-  (if (null? (cdr l))
-      (car l)
-      (cons (reverse-orig (cdr l)) (car l))))
-
 (define x 
   (list (list 1 2) (list 3 4)))
 
-;new, better definition of reverse
 (define (reverse l)
   (if (null? (cdr l))
       (list (car l) )
